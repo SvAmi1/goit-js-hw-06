@@ -1,6 +1,12 @@
-const inputEl = document.querySelector('#name-input');
+const formInputEl = document.querySelector('#name-input');
 const greetingEl = document.querySelector('#name-output');
 
-inputEl.addEventListener('input', () => {})
+formInputEl.addEventListener('input', (event) => {
+    
+    if (event.target.value.trim() == "") {
+        greetingEl.textContent == 'Anonymous';
+        return;
+    };
+    greetingEl.textContent = event.target.value;
+});
 
-function
